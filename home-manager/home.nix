@@ -11,7 +11,8 @@
   ./apps/zsh.nix 
   ./apps/swaylock.nix
   ./apps/hyprland.nix
-  ./apps/rofi.nix
+  ./apps/rofi.nix 
+  ./apps/waybar.nix
   ];
 
   home = {
