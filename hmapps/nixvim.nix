@@ -2,7 +2,6 @@
   imports = [
     ./bufferline.nix
     /home/wick3d/nix-config/hmapps/lsp.nix
-    /home/wick3d/nix-config/hmapps/cmp.nix
     /home/wick3d/nix-config/hmapps/copilot.nix
     #/home/wick3d/nix-config/hmapps/colorscheme.nix
     /home/wick3d/nix-config/hmapps/git.nix
