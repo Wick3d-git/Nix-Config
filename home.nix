@@ -70,7 +70,7 @@ in
   programs.home-manager.enable = true;
   nixpkgs = {
     config = {
-      permittedInsecurePackages = [ "python-2.7.18.7" ];
+      permittedInsecurePackages = [ "python-2.7.18.7" "nix-2.15.3" ];
       allowUnfree = true;
     };
 
