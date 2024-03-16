@@ -12,14 +12,13 @@
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
   };
 
-  outputs =
-    { self, nixpkgs, home-manager, spicetify-nix, hyprland, chaotic, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, spicetify-nix, hyprland, chaotic
+    , nixvim, ... }@inputs:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
-    in
-    {
+    in {
       nixosConfigurations = {
         NixOS-Testing = lib.nixosSystem {
           inherit system;
@@ -43,6 +42,7 @@
             ./hmapps/zsh.nix
             ./hmapps/waybar.nix
             ./hmapps/wlogout.nix
+            nixvim.homeManagerModules.nixvim
           ];
           extraSpecialArgs = inputs;
         };

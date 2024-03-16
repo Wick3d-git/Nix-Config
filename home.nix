@@ -1,14 +1,4 @@
-{ config, pkgs, lib, ... }:
-
-let
-  nixvim = import (builtins.fetchGit {
-    url = "https://github.com/nix-community/nixvim";
-    ref = "main";
-  });
-in
-{
-  imports = [ nixvim.homeManagerModules.nixvim ];
-
+{ config, pkgs, lib, ... }: {
   home.username = "wick3d";
   home.homeDirectory = "/home/wick3d";
   home.stateVersion = "23.11"; # Please read the comment before changing.
@@ -80,9 +70,7 @@ in
     enable = true;
     userName = "Anthony Abaray";
     userEmail = "122565774+Wick3d-git@users.noreply.github.com";
-    extraConfig = {
-      init.defaultBranch = "main";
-    };
+    extraConfig = { init.defaultBranch = "main"; };
   };
   nixpkgs = {
     config = {
