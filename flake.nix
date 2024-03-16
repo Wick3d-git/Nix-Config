@@ -9,10 +9,11 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     spicetify-nix.url = "github:the-argus/spicetify-nix";
     hyprland.url = "github:hyprwm/Hyprland";
+    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
   };
 
   outputs =
-    { self, nixpkgs, home-manager, spicetify-nix, hyprland, ... }@inputs:
+    { self, nixpkgs, home-manager, spicetify-nix, hyprland, chaotic, ... }@inputs:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -22,7 +23,7 @@
       nixosConfigurations = {
         NixOS-Testing = lib.nixosSystem {
           inherit system;
-          modules = [ ./configuration.nix ];
+          modules = [ ./configuration.nix chaotic.nixosModules.default ];
         };
       };
       homeConfigurations = {
@@ -34,7 +35,8 @@
             ./hmapps/fzf.nix
             ./hmapps/hyprland.nix
             ./hmapps/kitty.nix
-            ./hmapps/nixvim.nix
+#            ./hmapps/nixvim.nix
+            /home/wick3d/nix-config/hmapps/pypr.nix
             ./hmapps/rofi.nix
             ./hmapps/spicetify.nix
             ./hmapps/swaylock.nix

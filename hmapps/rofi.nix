@@ -41,7 +41,7 @@
 window {
   transparency: "real";
   fullscreen: true;
-  background-color: #2e3440dd;
+  background-color: rgba(46, 52, 64, 0.75);
 }
 
 mainbox {

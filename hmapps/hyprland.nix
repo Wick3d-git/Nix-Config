@@ -8,6 +8,7 @@
       exec-once = swaybg -o DP-3 -i /home/wick3d/Downloads/bg1.png 
       exec-once = swaybg -o HDMI-A-1 -i /home/wick3d/Downloads/bg1.png -m center
       exec-once = sleep 0.5 && waybar
+      exec-once = pypr
       input {
         kb_layout = us
         accel_profile = flat
@@ -50,7 +51,7 @@
       dwindle {
         preserve_split = yes
         pseudotile = yes 
-        no_gaps_when_only = yes
+        no_gaps_when_only = no
         special_scale_factor = 1
       }
 
@@ -83,6 +84,8 @@
       binde = SUPER_CTRL, up, resizeactive, 0 -20 
       binde = SUPER_CTRL, down, resizeactive, 0 20 
       bind = SUPER, G, togglegroup
+      bind = SUPER_SHIFT, return, exec, pypr toggle term && hyprctl dispatch bringactivetotop
+      bind = SUPER, r, exec, pypr toggle ranger && hyprctl dispatch bringactivetotop
 
 
       bind = SUPER, grave, workspace, previous
@@ -109,11 +112,21 @@
 
       layerrule = blur,waybar
       layerrule = blur,rofi
+       
+       $scratchpadsize = size 60% 65%
+
+       $scratchpad = class:^(scratchpad)$
+       windowrulev2 = float,$scratchpad
+       windowrulev2 = $scratchpadsize,$scratchpad
+       windowrulev2 = workspace special silent,$scratchpad
+
 
       windowrulev2 = nomaxsize,class:^(winecfg\.exe)$
       windowrulev2 = opaque,class:^(kitty)$
       windowrulev2 = noblur,class:^(kitty)$
-      windowrulev2 = opacity 0.92 0.92,class:^(thunar)$
+      windowrulev2 = opaque,class:^(waybar)$
+      windowrulev2 = noblur,class:^(waybar)$
+      windowrulev2 = opacity 0.3 0.3,class:^(pcmanfm)$
 
       # Scroll through existing workspaces with super + scroll
       bind = SUPER, mouse_down, workspace, e+1

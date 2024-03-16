@@ -8,7 +8,7 @@
     font.size = 12;
     keybindings = { "ctrl + l" = "clear_terminal scroll active"; };
     extraConfig = ''
-      background_opacity 1
+      background_opacity .75
       confirm_os_window_close 0
       cursor_shape underline
       cursor_blink_interval .75
