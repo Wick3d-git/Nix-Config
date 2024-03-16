@@ -3,8 +3,8 @@
 
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
-  #  nixvim.url = "github:nix-community/nixvim";
-  #  nixvim.inputs.nixpkgs.follows = "nixpkgs";
+    nixvim.url = "github:nix-community/nixvim";
+    nixvim.inputs.nixpkgs.follows = "nixpkgs";
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     spicetify-nix.url = "github:the-argus/spicetify-nix";
@@ -35,7 +35,7 @@
             ./hmapps/fzf.nix
             ./hmapps/hyprland.nix
             ./hmapps/kitty.nix
-#            ./hmapps/nixvim.nix
+            ./hmapps/nixvim.nix
             ./hmapps/pypr.nix
             ./hmapps/rofi.nix
             ./hmapps/spicetify.nix
