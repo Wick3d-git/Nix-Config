@@ -1,12 +1,12 @@
 { self, pkgs, ... }: {
   imports = [
     ./bufferline.nix
-    /home/wick3d/nix-config/hmapps/lsp.nix
-    /home/wick3d/nix-config/hmapps/copilot.nix
-    #/home/wick3d/nix-config/hmapps/colorscheme.nix
-    /home/wick3d/nix-config/hmapps/git.nix
-    /home/wick3d/nix-config/hmapps/cursorline.nix
-    /home/wick3d/nix-config/hmapps/markdown.nix
+    ./lsp.nix
+    ./copilot.nix
+    #./colorscheme.nix
+    ./git.nix
+    ./cursorline.nix
+    ./markdown.nix
   ];
   programs.nixvim = {
     enable = true;
