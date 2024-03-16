@@ -10,7 +10,7 @@
       nsc = "nvim ~/nix-config/configuration.nix";
       nrs = "sudo nixos-rebuild switch --flake 'nix-config/'";
       hsc = "nvim ~/nix-config/home.nix";
-      hrs = "home-manager switch --flake 'nix-config/' --impure";
+      hrs = "home-manager switch --flake 'nix-config/'";
       nsgc = "nix store gc";
     };
     initExtra = ''
