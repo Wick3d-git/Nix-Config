@@ -35,7 +35,6 @@ in
     nodePackages.vscode-langservers-extracted
     nodePackages_latest.vim-language-server
     neofetch
-    neovim
     nerdfonts
     nodejs
     pamixer
