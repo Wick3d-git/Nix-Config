@@ -16,7 +16,7 @@
               }
 
               window#waybar {
-                  background: #2e3440;
+                  background-color: rgba(46, 52, 64, 0.2);
                   color: #ffffff;
               }
 
@@ -28,7 +28,7 @@
                   border-color: #2e3440;
               }
               #tray {
-          background: #3b4252;
+          background-color: rgba(46, 52, 64, 0.2);
           padding: 0px 10px;
           margin: 5px 0px;
           margin-top: 6px;
@@ -67,24 +67,15 @@
                   border-radius: 4px;
               }
               #workspaces {
-                  background: #2e3440;
-                  border-radius: 10px;
+                  background-color: rgba(46, 52, 64, 0.2);
                   margin-left: 10px;
                   padding-right: 0px;
                   padding-left: 5px;
-                  border-color: #2e3440;
-                  border-style: solid;
-              }
-
+             }
               #clock {
                   color: #ffffff;
-                  border-radius: 0px 10px 10px 0px;
+                  background-color: rgba(46, 52, 64, 0.2);
                   margin-right: 8px;
-                  border-right: 0px;
-                  border-left: 0px;
-                  background: #2e3440;
-                  border-color: #2e3440;
-                  border-style: solid;
               }
     '';
     settings = [{

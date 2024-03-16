@@ -24,7 +24,8 @@
         efiSysMountPoint = "/boot";
       };
     };
-    kernelPackages = pkgs.linuxPackages_latest;
+    supportedFilesystems = [ "ntfs" ];
+    kernelPackages = pkgs.linuxPackages_cachyos;
   };
   networking.hostName = "NixOS-Testing";
   networking.networkmanager.enable = true;
