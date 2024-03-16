@@ -1,13 +1,13 @@
 { config, pkgs, lib, ... }:
 
-#let
-#  nixvim = import (builtins.fetchGit {
-#    url = "https://github.com/nix-community/nixvim";
-#    ref = "main";
-#  });
-#in
+let
+  nixvim = import (builtins.fetchGit {
+    url = "https://github.com/nix-community/nixvim";
+    ref = "main";
+  });
+in
 {
-#  imports = [ nixvim.homeManagerModules.nixvim ];
+  imports = [ nixvim.homeManagerModules.nixvim ];
 
   home.username = "wick3d";
   home.homeDirectory = "/home/wick3d";
@@ -21,6 +21,7 @@
     dconf
     dunst
     eza
+    fd
     floorp
     gamemode
     gcc
@@ -45,6 +46,7 @@
     pyprland
     python
     ranger
+    ripgrep
     rofi-wayland
     ryujinx
     swaybg
