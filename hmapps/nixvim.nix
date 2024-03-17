@@ -1,14 +1,16 @@
-{ self, pkgs, ... }: {
+{
   imports = [
     ./bufferline.nix
     ./lsp.nix
     ./copilot.nix
     ./cmp.nix
-    #./colorscheme.nix
+    ./conform.nix
+    #    ./fidget.nix
     ./luasnip.nix
     ./git.nix
     ./cursorline.nix
     ./markdown.nix
+    ./noice.nix
   ];
   programs.nixvim = {
     enable = true;
