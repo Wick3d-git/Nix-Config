@@ -74,7 +74,7 @@
   };
   nixpkgs = {
     config = {
-      permittedInsecurePackages = [ "python-2.7.18.7" "nix-2.15.3" ];
+      permittedInsecurePackages = [ "python-2.7.18.7" "nix-2.16.2" ];
       allowUnfree = true;
     };
 
