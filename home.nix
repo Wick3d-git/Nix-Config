@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }: {
+{ pkgs, ... }: {
   home.username = "wick3d";
   home.homeDirectory = "/home/wick3d";
   home.stateVersion = "23.11"; # Please read the comment before changing.
