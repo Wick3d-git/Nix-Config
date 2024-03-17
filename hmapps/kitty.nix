@@ -1,5 +1,4 @@
-{ pkgs, config, lib, ... }: {
-  home.packages = with pkgs; [ ];
+{
   programs.kitty = {
     enable = true;
     theme = "Nord";

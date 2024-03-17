@@ -1,5 +1,3 @@
-{ pkgs, ... }:
-
 {
   xdg.configFile."hypr/hyprland.conf".text = # bash
     ''
