@@ -1,5 +1,5 @@
-{ pkgs, config, lib, userSettings, ... }: {
-   home.file.".config/hypr/pyprland.json".text = ''
+{
+  home.file.".config/hypr/pyprland.json".text = ''
     {
       "pyprland": {
         "plugins": ["scratchpads", "magnify"]
