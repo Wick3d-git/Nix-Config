@@ -34,7 +34,7 @@
             ./hmapps/fzf.nix
             ./hmapps/hyprland.nix
             ./hmapps/kitty.nix
-            ./hmapps/nixvim.nix
+            ./hmapps/nixvim/nixvim.nix
             ./hmapps/pypr.nix
             ./hmapps/rofi.nix
             ./hmapps/spicetify.nix
