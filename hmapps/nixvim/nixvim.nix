@@ -7,10 +7,12 @@
     ./cursorline.nix
     ./fidget.nix
     ./git.nix
+    ./harpoon.nix
     ./lsp.nix
     ./luasnip.nix
     ./markdown.nix
     ./noice.nix
+    ./undotree.nix
   ];
   programs.nixvim = {
     enable = true;
