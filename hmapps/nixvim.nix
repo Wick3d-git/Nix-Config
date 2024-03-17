@@ -3,7 +3,9 @@
     ./bufferline.nix
     ./lsp.nix
     ./copilot.nix
+    ./cmp.nix
     #./colorscheme.nix
+    ./luasnip.nix
     ./git.nix
     ./cursorline.nix
     ./markdown.nix
@@ -14,6 +16,8 @@
     colorschemes.nord.enable = true;
     plugins = {
       lualine.enable = true;
+      luasnip.enable = true;
+      cmp_luasnip.enable = true;
       nvim-tree.enable = true;
       treesitter.enable = true;
       treesitter.ensureInstalled = [

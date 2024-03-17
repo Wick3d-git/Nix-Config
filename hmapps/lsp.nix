@@ -9,12 +9,13 @@
         gopls.enable = true;
         bashls.enable = true;
         pylsp.enable = true;
+        pyright.enable = true;
         tsserver.enable = true;
         terraformls.enable = true;
         rust-analyzer.enable = true;
         rust-analyzer.installCargo = false;
         rust-analyzer.installRustc = false;
-        rnix-lsp.enable = true;
+        nil_ls.enable = true;
         rust-analyzer.settings = {
           interpret.tests = true; # test this
           completion.fullFunctionSignatures.enable = true;
