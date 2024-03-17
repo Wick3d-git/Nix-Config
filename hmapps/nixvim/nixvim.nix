@@ -1,14 +1,14 @@
 {
   imports = [
     ./bufferline.nix
-    ./lsp.nix
-    ./copilot.nix
     ./cmp.nix
     ./conform.nix
-    #    ./fidget.nix
-    ./luasnip.nix
-    ./git.nix
+    ./copilot.nix
     ./cursorline.nix
+    ./fidget.nix
+    ./git.nix
+    ./lsp.nix
+    ./luasnip.nix
     ./markdown.nix
     ./noice.nix
   ];
