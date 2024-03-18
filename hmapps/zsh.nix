@@ -11,6 +11,7 @@
       hsc = "nvim ~/nix-config/home.nix";
       hrs = "home-manager switch --flake 'nix-config/'";
       nsgc = "nix store gc";
+      tb = "appimage-run ~/Downloads/TB.AppImage";
     };
     initExtra = ''
       PROMPT='%F{blue}  %1~%f%F{white} |%  '
