@@ -18,7 +18,6 @@
                   background-color: rgba(46, 52, 64, 0.2);
                   color: #ffffff;
               }
-
               tooltip {
                   background: #4c566a;
                   border-radius: 0px;
