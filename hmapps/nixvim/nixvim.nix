@@ -12,6 +12,7 @@
     ./luasnip.nix
     ./markdown.nix
     ./noice.nix
+    ./sets.nix
     ./undotree.nix
   ];
   programs.nixvim = {
