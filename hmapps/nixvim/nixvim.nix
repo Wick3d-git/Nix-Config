@@ -12,12 +12,14 @@
     ./luasnip.nix
     ./markdown.nix
     ./noice.nix
-    ./sets.nix
+    #./sets.nix
     ./undotree.nix
   ];
   programs.nixvim = {
     enable = true;
-    globals.mapleader = " ";
+    globals = {
+      mapleader = " ";
+    };
     colorschemes.nord.enable = true;
     plugins = {
       lualine.enable = true;
@@ -62,17 +64,17 @@
       {
         action = "<cmd> Telescope find_files hidden=true<CR>";
         mode = "n";
-        key = "<leader>pf";
+        key = "<leader><space>";
       }
       {
         action = "<cmd> Telescope git_files hidden=true<CR>";
         mode = "n";
-        key = "<C-p>";
+        key = "<C-s>";
       }
       {
         action = "<cmd> NvimTreeFindFileToggle<CR>";
         mode = "n";
-        key = "<C-n>";
+        key = "<C-p>";
       }
     ];
     extraConfigLua = ''

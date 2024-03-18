@@ -34,8 +34,8 @@
       # Enable ignorecase + smartcase for better searching
       ignorecase = true;
       smartcase = true; # Don't ignore case with capitals
-      grepprg = "rg --vimgrep";
-      grepformat = "%f:%l:%c:%m";
+      #grepprg = "rg --vimgrep";
+      #grepformat = "%f:%l:%c:%m";
 
       # Decrease updatetime
       updatetime = 50; # faster completion (4000ms default)
