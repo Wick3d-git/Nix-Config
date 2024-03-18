@@ -105,9 +105,9 @@
         "spacing" = 10;
       };
       "clock" = {
-        "format" = "{: %R  %m/%d/%Y}";
+        #"format" = "{ :%H:%M  %m/%d/%Y}";
+        "format" = "{:%H:%M %m/%d/%Y}";
         "tooltip-format" = ''
-          <big>{:%Y %B}</big>
           <tt><small>{calendar}</small></tt>'';
       };
     }];
