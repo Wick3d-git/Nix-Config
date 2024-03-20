@@ -24,6 +24,10 @@
           inherit system;
           modules = [ ./configuration.nix chaotic.nixosModules.default ];
         };
+        NixOS-Laptop-Testing = lib.nixosSystem {
+          inherit system;
+          modules = [ ./configuration-laptop.nix chaotic.nixosModules.default ];
+        };
       };
       homeConfigurations = {
         wick3d = home-manager.lib.homeManagerConfiguration {
