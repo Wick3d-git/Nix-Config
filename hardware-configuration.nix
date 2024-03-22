@@ -18,6 +18,11 @@
       fsType = "ext4";
     };
 
+  fileSystems."/home/wick3d/Storage" =
+    { device = "/dev/disk/by-uuid/6febdd7e-6699-4904-bd5e-f7f0d94e4c85";
+      fsType = "ext4";
+    };
+
   fileSystems."/boot" =
     { device = "/dev/disk/by-uuid/ABF4-617C";
       fsType = "vfat";
