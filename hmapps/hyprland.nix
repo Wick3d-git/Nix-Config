@@ -7,6 +7,7 @@
       exec-once = swaybg -o HDMI-A-1 -i /home/wick3d/Downloads/bg1.png -m center
       exec-once = sleep 0.5 && waybar
       exec-once = pypr
+      exec-once = hyprshade on vibrance
       input {
         kb_layout = us
         accel_profile = flat
