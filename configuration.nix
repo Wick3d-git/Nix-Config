@@ -55,7 +55,7 @@
     description = "Anthony Abaray";
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.zsh;
-    packages = with pkgs; [ ];
+    packages = with pkgs; [ hyprshade ];
   };
    fonts.packages = with pkgs; [
     rubik
@@ -77,6 +77,7 @@
   services.mullvad-vpn.enable = true;
   services.mullvad-vpn.package = pkgs.mullvad-vpn;
   programs.zsh.enable = true;
+  programs.steam.enable = true;
   programs.dconf.enable = true;
   environment.systemPackages = with pkgs; [ git ];
   system.stateVersion = "23.11";
