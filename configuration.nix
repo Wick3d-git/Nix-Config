@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  imports = [ ./hardware-configuration.nix ];
+  imports = [ ./hardware-configuration.nix ./network.nix ];
   hardware = {
     cpu.amd.updateMicrocode = true;
     enableRedistributableFirmware = true;
