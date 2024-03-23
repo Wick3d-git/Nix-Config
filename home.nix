@@ -38,6 +38,7 @@
     ripgrep
     rofi-wayland
     swaybg
+    tmux
     ueberzug
     unrar
     unzip
