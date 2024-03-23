@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  imports = [ ./hardware-configuration.nix ./network.nix ];
+  imports = [ ./hardware-configuration.nix ];
   hardware = {
     cpu.amd.updateMicrocode = true;
     enableRedistributableFirmware = true;
@@ -70,10 +70,6 @@
   ];
   nixpkgs.config.allowUnfree = true;
   security.pam.services.swaylock.text = "auth include login ";
-  services.resolved = {
-    enable = true;
-    extraConfig = "";
-  };
   services.mullvad-vpn.enable = true;
   services.mullvad-vpn.package = pkgs.mullvad-vpn;
   programs.zsh.enable = true;
