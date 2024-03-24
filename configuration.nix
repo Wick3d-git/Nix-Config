@@ -74,6 +74,7 @@
   services.mullvad-vpn.package = pkgs.mullvad-vpn;
   programs.zsh.enable = true;
   programs.steam.enable = true; #gitignore
+#gitignore
   programs.dconf.enable = true;
   environment.systemPackages = with pkgs; [ git ];
   system.stateVersion = "23.11";
