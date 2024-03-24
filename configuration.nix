@@ -49,6 +49,10 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
+    extraConfig.pipewire = {
+      "default.clock.rate" = 96000;
+      "default.clock.quantum" = 24;
+    };
   };
   users.users.wick3d = {
     isNormalUser = true;
