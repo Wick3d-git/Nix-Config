@@ -13,7 +13,6 @@
     eza
     fd
     floorp
-    gamemode
     gcc
     git
     gitkraken
@@ -31,7 +30,6 @@
     pavucontrol
     pcmanfm
     playerctl
-    protonup-qt
     pyprland
     python
     ranger
