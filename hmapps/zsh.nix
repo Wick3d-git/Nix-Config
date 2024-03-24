@@ -11,6 +11,8 @@
       hsc = "nvim ~/nix-config/home.nix";
       hrs = "home-manager switch --flake 'nix-config/'";
       nsgc = "nix store gc";
+      v = "nvim";
+      vim = "nvim";
       tb = "appimage-run ~/Downloads/TB.AppImage";
     };
     initExtra = ''
