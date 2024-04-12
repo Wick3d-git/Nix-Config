@@ -8,23 +8,18 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usb_storage" "usbhid" "sd_mod" ];
+  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/54c0622c-00f3-4269-b7ed-e13e8b6318a3";
-      fsType = "ext4";
-    };
-
-  fileSystems."/home/wick3d/Storage" =
-    { device = "/dev/disk/by-uuid/6febdd7e-6699-4904-bd5e-f7f0d94e4c85";
+    { device = "/dev/disk/by-uuid/5ec2b0fc-3674-454a-bec9-cc7d1916f0b2";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/ABF4-617C";
+    { device = "/dev/disk/by-uuid/1A4A-AD57";
       fsType = "vfat";
     };
 

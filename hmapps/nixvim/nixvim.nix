@@ -49,7 +49,7 @@
       indent-blankline.enable = true;
       fidget.enable = true;
     };
-    options = {
+    opts = {
       number = true; # Show line numbers
       shiftwidth = 2; # Tab width should be 2
       tabstop = 2;

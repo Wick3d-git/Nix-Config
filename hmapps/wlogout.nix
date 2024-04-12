@@ -63,38 +63,38 @@
       }
 
       #lock {
-          background-image: image(url("/home/wick3d/nix-config/Images/lock.png"));
+          background-image: image(url("/home/wick3d/NixOS-Config/Images/lock.png"));
       }
       #lock:focus {
-          background-image: image(url("/home/wick3d/nix-config/Images/lock-hover.png"));
+          background-image: image(url("/home/wick3d/NixOS-Config/Images/lock-hover.png"));
       }
 
       #logout {
-          background-image: image(url("/home/wick3d/nix-config/Images/logout.png"));
+          background-image: image(url("/home/wick3d/NixOS-Config/Images/logout.png"));
       }
       #logout:focus {
-          background-image: image(url("/home/wick3d/nix-config/Images/logout-hover.png"));
+          background-image: image(url("/home/wick3d/NixOS-Config/Images/logout-hover.png"));
       }
 
       #suspend {
-          background-image: image(url("/home/wick3d/nix-config/Images/sleep.png"));
+          background-image: image(url("/home/wick3d/NixOS-Config/Images/sleep.png"));
       }
       #suspend:focus {
-          background-image: image(url("/home/wick3d/nix-config/Images/sleep-hover.png"));
+          background-image: image(url("/home/wick3d/NixOS-Config/Images/sleep-hover.png"));
       }
 
       #shutdown {
-          background-image: image(url("/home/wick3d/nix-config/Images/power.png"));
+          background-image: image(url("/home/wick3d/NixOS-Config/Images/power.png"));
       }
       #shutdown:focus {
-          background-image: image(url("/home/wick3d/nix-config/Images/power-hover.png"));
+          background-image: image(url("/home/wick3d/NixOS-Config/Images/power-hover.png"));
       }
 
       #reboot {
-          background-image: image(url("/home/wick3d/nix-config/Images/restart.png"));
+          background-image: image(url("/home/wick3d/NixOS-Config/Images/restart.png"));
       }
       #reboot:focus {
-          background-image: image(url("/home/wick3d/nix-config/Images/restart-hover.png"));
+          background-image: image(url("/home/wick3d/NixOS-Config/Images/restart-hover.png"));
       }
     '';
   };

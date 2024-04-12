@@ -1,12 +1,10 @@
 {
   pkgs,
-  config,
-  lib,
   ...
 }: {
   home.packages = with pkgs; [ ];
   programs.swaylock = {
-    enable = true;
+    enable = false;
     package = pkgs."swaylock-effects";
     settings = {
       bs-hl-color = "31748f";

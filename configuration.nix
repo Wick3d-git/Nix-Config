@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
   imports = [ ./hardware-configuration.nix ];
@@ -11,7 +11,7 @@
     opengl.driSupport32Bit = true;
     opengl.setLdLibraryPath = true;
   };
-  boot = {
+ boot = {
     loader = {
       grub = {
         device = "nodev";
@@ -19,9 +19,12 @@
         gfxmodeEfi = "2560x1440";
         useOSProber = true;
       };
-      efi = {
+             efi = {
+
         canTouchEfiVariables = true;
+
         efiSysMountPoint = "/boot";
+
       };
     };
     supportedFilesystems = [ "ntfs" ];
@@ -49,6 +52,17 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
+    jack.enable = true;
+    extraConfig.pipewire = {
+    "92-low-latency" = {
+      "context.properties" = {
+        "default.clock.rate" = 96000;
+        "default.clock.quantum" = 512;
+        "default.clock.min-quantum" = 512;
+        "default.clock.max-quantum" = 512;
+      };
+    };
+  };
   };
   users.users.wick3d = {
     isNormalUser = true;
@@ -70,8 +84,10 @@
   ];
   nixpkgs.config.allowUnfree = true;
   security.pam.services.swaylock.text = "auth include login ";
-  services.mullvad-vpn.enable = true;
-  services.mullvad-vpn.package = pkgs.mullvad-vpn;
+  services.resolved = {
+    enable = true;
+  extraConfig = "";
+  };  
   programs.zsh.enable = true;
   programs.dconf.enable = true;
   environment.systemPackages = with pkgs; [ git ];

@@ -14,6 +14,11 @@
           "command": "kitty --class scratchpad -e ranger",
           "margin": 50,
           "animation": "fromTop"
+        },
+        "volume": {
+          "command": "kitty --class scratchpad -e pulsemixer",
+          "margin": 50,
+          "animation": "fromTop"
         }
       }
     }
