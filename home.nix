@@ -3,23 +3,24 @@
   home.homeDirectory = "/home/wick3d";
   home.stateVersion = "23.11"; # Please read the comment before changing.
   home.packages = with pkgs; [
-    appimage-run
+    ananicy-cpp
+    ananicy-rules-cachyos
     bitwarden
-    btop
-    cargo
-    cz-cli
     dconf
+    duf
     dunst
     eza
     fd
-    floorp
-    gcc
+    figma-linux
+    figma-agent
     git
-    gitkraken
-    gnumake
+    grim
+    hyprcursor
+    hypridle
+    hyprlock
+    hyprpaper
     libdrm
     libnotify
-    mangohud
     nodePackages_latest.live-server
     nodePackages.vscode-langservers-extracted
     nodePackages_latest.vim-language-server
@@ -28,22 +29,24 @@
     nodejs
     pamixer
     pavucontrol
-    pcmanfm
     playerctl
+    pulsemixer
     pyprland
     python
     ranger
     ripgrep
     rofi-wayland
-    swaybg
+    rustup
+    slurp
+    swappy
     tmux
-    ueberzug
+    ungoogled-chromium
     unrar
     unzip
-    vesktop
-    via
+    webcord
     wget
     wlprop
+    zip
   ];
   gtk = {
     enable = true;
@@ -72,7 +75,7 @@
   };
   nixpkgs = {
     config = {
-      permittedInsecurePackages = [ "python-2.7.18.7" "nix-2.16.2" ];
+      permittedInsecurePackages = [ "python-2.7.18.8" "nix-2.16.2" ];
       allowUnfree = true;
     };
 

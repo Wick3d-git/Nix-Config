@@ -2,11 +2,10 @@
   xdg.configFile."hypr/hyprland.conf".text = # bash
     ''
       monitor=DP-3,2560x1440@170,0x0,1
-      monitor=HDMI-A-1,1920x1080@240,-2560x0,1,transform,1
-      exec-once = swaybg -o DP-3 -i /home/wick3d/Downloads/bg1.png 
-      exec-once = swaybg -o HDMI-A-1 -i /home/wick3d/Downloads/bg1.png -m center
+      exec-once = hyprpaper 
       exec-once = sleep 0.5 && waybar
       exec-once = pypr
+      exec-once = hyprctl setcursor Nordzy-cursors-white-HYPR 32
       exec-once = hyprshade on vibrance
       input {
         kb_layout = us
@@ -64,7 +63,7 @@
       bind = SUPER_SHIFT, Q, exit
       bind = SUPER, Space, togglefloating,
       bind = SUPER, F, fullscreen,
-      bind = CTRL_ALT, L, exec, swaylock -i ~/Downloads/bg1.png 
+      bind = CTRL_ALT, L, exec, hyprlock 
       bind = SUPER, D, exec, killall rofi || rofi -show drun 
       bind = SUPER, E, exec, pcmanfm
       bind = SUPER,TAB, cyclenext,
@@ -85,6 +84,7 @@
       bind = SUPER, G, togglegroup
       bind = SUPER_SHIFT, return, exec, pypr toggle term && hyprctl dispatch bringactivetotop
       bind = SUPER, r, exec, pypr toggle ranger && hyprctl dispatch bringactivetotop
+      bind = SUPER, v, exec, pypr toggle volume && hyprctl dispatch bringactivetotop
 
 
       bind = SUPER, grave, workspace, previous

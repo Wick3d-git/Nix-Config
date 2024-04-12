@@ -6,10 +6,10 @@
     syntaxHighlighting.enable = true;
     shellAliases = {
       ls = "exa --icons";
-      nsc = "nvim ~/nix-config/configuration.nix";
-      nrs = "sudo nixos-rebuild switch --flake 'nix-config/'";
-      hsc = "nvim ~/nix-config/home.nix";
-      hrs = "home-manager switch --flake 'nix-config/'";
+      nsc = "nvim ~/NixOS-Config/configuration.nix";
+      nrs = "sudo nixos-rebuild switch --flake 'NixOS-Config/'";
+      hsc = "nvim ~/NixOS-Config/home.nix";
+      hrs = "home-manager switch --flake 'NixOS-Config/'";
       nsgc = "nix store gc";
       v = "nvim";
       vim = "nvim";
@@ -20,7 +20,7 @@
       neofetch
       export EDITOR='nvim'
       export TERMINAL='kitty'
-      export BROWSER='floorp'
+      export BROWSER='chromium'
       export TERM='kitty'
     '';
   };

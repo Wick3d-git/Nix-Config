@@ -64,6 +64,7 @@
     listview {
       spacing: 3px;
       columns: 1;
+      lines: 5;
       scrollbar: false;
     }
 

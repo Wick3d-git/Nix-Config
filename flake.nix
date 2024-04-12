@@ -36,11 +36,16 @@
             ./home.nix
             ./hmapps/dunst.nix
             ./hmapps/fzf.nix
+            ./hmapps/hyprpaper.nix
+            ./hmapps/hyprshade.nix
+            ./hmapps/hyprlock.nix
             ./hmapps/hyprland.nix
             ./hmapps/kitty.nix
+            ./hmapps/neofetch.nix
             ./hmapps/nixvim/nixvim.nix
             ./hmapps/pypr.nix
             ./hmapps/rofi.nix
+            ./hmapps/screenshot.nix
             ./hmapps/spicetify.nix
             ./hmapps/swaylock.nix
             ./hmapps/zsh.nix
