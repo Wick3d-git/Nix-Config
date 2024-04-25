@@ -84,8 +84,8 @@
   ];
   nixpkgs.config.allowUnfree = true;
   security.pam.services.swaylock.text = "auth include login ";
-  sops.defaultSopsFile = ./secrets/secrets.yaml;
-  sops.defaultSopsFormat = "yaml";
+  sops.defaultSopsFile = ./secrets/secrets.json;
+  sops.defaultSopsFormat = "json";
   sops.age.keyFile = "/home/wick3d/.config/sops/age/keys.txt";
   services.resolved = {
     enable = true;
