@@ -89,7 +89,7 @@
   sops.age.keyFile = "/home/wick3d/.config/sops/age/keys.txt";
   services.resolved = {
     enable = true;
-  extraConfig = "${config.sops.secrets.nextdns_config}";
+  extraConfig = "${config.sops.secrets.nextdns_config.path}";
   };  
   programs.zsh.enable = true;
   programs.dconf.enable = true;
