@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, inputs, ... }: {
   home.username = "wick3d";
   home.homeDirectory = "/home/wick3d";
   home.stateVersion = "23.11"; # Please read the comment before changing.
@@ -6,6 +6,7 @@
     ananicy-cpp
     ananicy-rules-cachyos
     bitwarden
+    brave
     dconf
     duf
     dunst
@@ -19,6 +20,7 @@
     hypridle
     hyprlock
     hyprpaper
+    hyprpicker
     libdrm
     libnotify
     nodePackages_latest.live-server
@@ -32,7 +34,7 @@
     playerctl
     pulsemixer
     pyprland
-    python
+    python312
     ranger
     ripgrep
     rofi-wayland
@@ -40,7 +42,6 @@
     slurp
     swappy
     tmux
-    ungoogled-chromium
     unrar
     unzip
     webcord
@@ -75,7 +76,7 @@
   };
   nixpkgs = {
     config = {
-      permittedInsecurePackages = [ "python-2.7.18.8" "nix-2.16.2" ];
+      permittedInsecurePackages = [ "nix-2.16.2" ];
       allowUnfree = true;
     };
 

@@ -45,3 +45,6 @@ new.reddit.com##._2t7TYn6HwRZQwKXG47kpQR._23q1waDr4n_2fR5A7zcZzb.x0hiXHicn7r3BG9
 new.reddit.com##div._2vEf-C2keJaBMY9qk_BxVn > ._2QeqBqfT5UbHBoViZUt-wX._1G4yU68P50vRZ4USXfaceV > ._3RPJ8hHnfFohktLZca18J6
 new.reddit.com##._2QeqBqfT5UbHBoViZUt-wX._1G4yU68P50vRZ4USXfaceV._2wqyhtudP4weVGsZdVXJgt > ._3RPJ8hHnfFohktLZca18J6
 
+! 2024-04-14 https://www.youtube.com
+||www.gstatic.com/youtube/img/promos/growth/6187a01b3096fe1cd76bbfe42b775ddfc7faf3047044a3afee9c620e35227155_122x56.webp$image
+||www.gstatic.com/youtube/img/promos/growth/e4365b52dfe2aecd9eddc6f889c8a7c32bc2dafd0ea35df33114837b97ba30a1_122x56.webp$image
