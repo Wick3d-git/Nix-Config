@@ -13,11 +13,10 @@
     nur.url = "github:nix-community/NUR";
     disko.url = "github:nix-community/disko";
     disko.inputs.nixpkgs.follows = "nixpkgs";
-    sops-nix.url = "github:Mic92/sops-nix";
   };
 
   outputs = { self, nixpkgs, home-manager, spicetify-nix, hyprland, chaotic
-    , nixvim, nur, disko, sops-nix, ... }@inputs:
+    , nixvim, nur, disko, ... }@inputs:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -26,7 +25,7 @@
       nixosConfigurations = {
         NixOS-Testing = lib.nixosSystem {
           inherit system;
-          modules = [ ./configuration-desktop.nix chaotic.nixosModules.default disko.nixosModules.default sops-nix.nixosModules.sops ];
+          modules = [ ./configuration-desktop.nix chaotic.nixosModules.default disko.nixosModules.default ];
         };
         NixOS-Laptop-Testing = lib.nixosSystem {
           inherit system;
