@@ -87,9 +87,10 @@
   sops.defaultSopsFile = ./secrets/secrets.json;
   sops.defaultSopsFormat = "json";
   sops.age.keyFile = "/home/wick3d/.config/sops/age/keys.txt";
+  sops.secrets.nextdns_config = { };
   services.resolved = {
     enable = true;
-  extraConfig = "${config.sops.secrets.nextdns_config.path}";
+    extraConfig = "${config.sops.secrets.nextdns_config.path}";
   };  
   programs.zsh.enable = true;
   programs.dconf.enable = true;
