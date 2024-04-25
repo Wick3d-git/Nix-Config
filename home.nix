@@ -40,6 +40,7 @@
     rofi-wayland
     rustup
     slurp
+    sops
     swappy
     tmux
     unrar
