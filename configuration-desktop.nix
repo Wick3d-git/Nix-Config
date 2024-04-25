@@ -1,7 +1,7 @@
-{ pkgs, lib, ... }:
+{ pkgs, lib, inputs, config, ... }:
 
 {
-  imports = [ ./hardware-configuration.nix ./disko.nix ];
+  imports = [ ./hardware-configuration.nix ./disko.nix inputs.sops-nix.nixosModules.sops ];
   hardware = {
     cpu.amd.updateMicrocode = true;
     enableRedistributableFirmware = true;
@@ -84,9 +84,12 @@
   ];
   nixpkgs.config.allowUnfree = true;
   security.pam.services.swaylock.text = "auth include login ";
+  sops.defaultSopsFile = ./secrets/secrets.yaml;
+  sops.defaultSopsFormat = "yaml";
+  sops.age.keyFile = "/home/wick3d/.config/sops/age/keys.txt";
   services.resolved = {
     enable = true;
-  extraConfig = "";
+  extraConfig = "${config.sops.secrets.nextdns_config}";
   };  
   programs.zsh.enable = true;
   programs.dconf.enable = true;
