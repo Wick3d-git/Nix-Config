@@ -9,7 +9,7 @@
 home.file.".config/hypr/hyprlock.conf".text = 
 '' background {
       monitor =
-      path = /home/wick3d/NixOS-Config/Wallpapers/bg2.png   # only png supported for now
+      path = /home/wick3d/NixOS-Config/Downloads/Wallpapers/bg2.png   # only png supported for now
   }
 
   input-field {
