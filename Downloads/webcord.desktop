@@ -1,0 +1,8 @@
+[Desktop Entry]
+Categories=Network;InstantMessaging
+Comment=A Discord and SpaceBar electron-based client implemented without Discord API
+Exec=webcord --enable-features=UseOzonePlatform --ozone-platform=wayland
+Icon=webcord
+Name=WebCord
+Type=Application
+Version=1.4

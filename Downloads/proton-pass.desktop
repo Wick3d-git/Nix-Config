@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Proton Pass
+Comment=Proton Pass desktop application
+GenericName=Password Manager
+Exec=proton-pass --ozone-platform=wayland --enable-features=UseOzonePlatform %U
+Icon=proton-pass
+Type=Application
+StartupNotify=true
+Categories=Utility;
+

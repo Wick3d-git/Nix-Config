@@ -1,11 +1,8 @@
-{ pkgs, inputs, ... }: {
+{ pkgs, ... }: {
   home.username = "wick3d";
   home.homeDirectory = "/home/wick3d";
   home.stateVersion = "23.11"; # Please read the comment before changing.
   home.packages = with pkgs; [
-    ananicy-cpp
-    ananicy-rules-cachyos
-    bitwarden
     brave
     dconf
     duf
@@ -13,7 +10,6 @@
     eza
     fd
     figma-linux
-    figma-agent
     git
     grim
     hyprcursor
@@ -21,17 +17,20 @@
     hyprlock
     hyprpaper
     hyprpicker
+    jetbrains-toolbox
     libdrm
     libnotify
     nodePackages_latest.live-server
     nodePackages.vscode-langservers-extracted
     nodePackages_latest.vim-language-server
+    niv
     neofetch
     nerdfonts
     nodejs
     pamixer
     pavucontrol
     playerctl
+    proton-pass
     pulsemixer
     pyprland
     python312
@@ -39,6 +38,7 @@
     ripgrep
     rofi-wayland
     rustup
+    sbctl
     slurp
     swappy
     tmux

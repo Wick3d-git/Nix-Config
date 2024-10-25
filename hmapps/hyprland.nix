@@ -22,7 +22,6 @@
         col.inactive_border = rgba(2e344040) 
         col.active_border = rgb(ffffff)
         layout = dwindle
-        apply_sens_to_raw = yes 
       }
 
       decoration {

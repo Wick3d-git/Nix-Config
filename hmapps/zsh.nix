@@ -6,7 +6,7 @@
     syntaxHighlighting.enable = true;
     shellAliases = {
       ls = "exa --icons";
-      nsc = "nvim ~/NixOS-Config/configuration.nix";
+      nsc = "nvim ~/NixOS-Config/configuration-desktop.nix";
       nrs = "sudo nixos-rebuild switch --flake 'NixOS-Config/'";
       hsc = "nvim ~/NixOS-Config/home.nix";
       hrs = "home-manager switch --impure --flake 'NixOS-Config/'";
