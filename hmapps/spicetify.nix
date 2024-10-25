@@ -1,19 +1,19 @@
 { pkgs, lib, spicetify-nix, ... }:
 let
-  spicePkgs = spicetify-nix.packages.${pkgs.system}.default;
+  spicePkgs = spicetify-nix.legacyPackages.${pkgs.system};
 in
 {
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
     "spotify"
   ];
   # import the flake's module for your system
-  imports = [ spicetify-nix.homeManagerModule ];
+  imports = [ spicetify-nix.homeManagerModules.default ];
 
   # configure spicetify :)
   programs.spicetify =
     {
       enable = true;
-      theme = spicePkgs.themes.Sleek;
+      theme = spicePkgs.themes.sleek;
       colorScheme = "nord";
 
       enabledExtensions = with spicePkgs.extensions; [

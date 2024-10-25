@@ -6,11 +6,11 @@
       servers = {
         cmake = {enable = true;};
         bashls = {enable = true;};
-        tsserver = {enable = true;};
-        rust-analyzer = { enable = true; };
-        rust-analyzer.installCargo = false;
-        rust-analyzer.installRustc = false;
-        rust-analyzer.settings = {
+        ts_ls = {enable = true;};
+        rust_analyzer = { enable = true; };
+        rust_analyzer.installCargo = false;
+        rust_analyzer.installRustc = false;
+        rust_analyzer.settings = {
           interpret.tests = true; # test this
           completion.fullFunctionSignatures.enable = true;
           lens = {
@@ -24,7 +24,7 @@
           };
         };
         html = {enable = true;};
-        lua-ls = {enable = true;};
+        lua_ls = {enable = true;};
         nil_ls = {enable = true;};
         marksman = {enable = true;};
         pyright = {enable = true;};

@@ -1,12 +1,13 @@
 {
   programs.nixvim.plugins.conform-nvim = {
     enable = true;
-    formatOnSave = {
+    settings = {
+      format_on_save = {
       lspFallback = true;
       timeoutMs = 500;
-    };
-    notifyOnError = true;
-    formattersByFt = {
+      };
+      notifyOnError = true;
+      formatters_by_ft = {
       liquidsoap = [ "liquidsoap-prettier" ];
       html = [[ "prettierd" "prettier" ]];
       css = [[ "prettierd" "prettier" ]];
@@ -20,5 +21,6 @@
       markdown = [[ "prettierd" "prettier" ]];
       yaml = [ "yamllint" "yamlfmt" ];
     };
+  };
   };
 }

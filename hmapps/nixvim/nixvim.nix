@@ -22,12 +22,13 @@
     };
     colorschemes.nord.enable = true;
     plugins = {
+      web-devicons.enable = true;
       lualine.enable = true;
       luasnip.enable = true;
       cmp_luasnip.enable = true;
       nvim-tree.enable = true;
       treesitter.enable = true;
-      treesitter.ensureInstalled = [
+      treesitter.settings.ensure_installed = [
         "bash"
         "cpp"
         "css"

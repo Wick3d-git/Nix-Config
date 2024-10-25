@@ -1,7 +1,7 @@
 {
   programs.kitty = {
     enable = true;
-    theme = "Nord";
+    themeFile = "Nord";
     shellIntegration.enableZshIntegration = true;
     font.name = "JetBrainsMono Nerd Font";
     font.size = 12;

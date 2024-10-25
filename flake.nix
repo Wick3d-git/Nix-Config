@@ -7,16 +7,14 @@
     nixvim.inputs.nixpkgs.follows = "nixpkgs";
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    spicetify-nix.url = "github:the-argus/spicetify-nix";
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     hyprland.url = "github:hyprwm/Hyprland";
-    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     nur.url = "github:nix-community/NUR";
     disko.url = "github:nix-community/disko";
     disko.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, home-manager, spicetify-nix, hyprland, chaotic
-    , nixvim, nur, disko, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, spicetify-nix, hyprland, nixvim, nur, disko, ... }@inputs:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -25,11 +23,11 @@
       nixosConfigurations = {
         NixOS-Testing = lib.nixosSystem {
           inherit system;
-          modules = [ ./configuration-desktop.nix chaotic.nixosModules.default disko.nixosModules.default ];
+          modules = [ ./configuration-desktop.nix disko.nixosModules.default ];
         };
         NixOS-Laptop-Testing = lib.nixosSystem {
           inherit system;
-          modules = [ ./configuration-laptop.nix chaotic.nixosModules.default ];
+          modules = [ ./configuration-laptop.nix ];
         };
       };
       homeConfigurations = {
