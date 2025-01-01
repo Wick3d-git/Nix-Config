@@ -3,12 +3,12 @@
   home.homeDirectory = "/home/wick3d";
   home.stateVersion = "23.11"; # Please read the comment before changing.
   home.packages = with pkgs; [
-    brave
     dconf
     duf
     dunst
     eza
     fd
+    firefox
     figma-linux
     git
     grim
@@ -17,7 +17,6 @@
     hyprlock
     hyprpaper
     hyprpicker
-    jetbrains-toolbox
     libdrm
     libnotify
     nodePackages_latest.live-server
@@ -25,7 +24,9 @@
     nodePackages_latest.vim-language-server
     niv
     neofetch
-    nerdfonts
+    nerd-fonts.jetbrains-mono
+    nerd-fonts.iosevka
+    nerd-fonts.fira-code
     nodejs
     pamixer
     pavucontrol
@@ -44,6 +45,7 @@
     tmux
     unrar
     unzip
+    vscode
     webcord
     wget
     wlprop

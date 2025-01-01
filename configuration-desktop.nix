@@ -12,32 +12,32 @@ in
     enableRedistributableFirmware = true;
     graphics.enable = true;
     pulseaudio.enable = false;
-    logitech.enable = true;
-    logitech.enableGraphical = true;
+    logitech.wireless.enable = true;
+    logitech.wireless.enableGraphical = true;
   };
  boot = {
     loader = {
-#grub = {
-#        device = "nodev";
-#        efiSupport = true;
-#        gfxmodeEfi = "2560x1440";
-#        useOSProber = true;
-#      };
-      systemd-boot = {
-        enable = lib.mkForce false;
+      grub = {
+        device = "nodev";
+        efiSupport = true;
+        gfxmodeEfi = "2560x1440";
+        useOSProber = true;
       };
-             efi = {
+      # systemd-boot = {
+      #   enable = lib.mkForce false;
+      # };
+        efi = {
 
         canTouchEfiVariables = true;
 
         efiSysMountPoint = "/boot";
 
-      };
+        };
     };
-      lanzaboote = {
-        enable = true;
-        pkiBundle = "/etc/secureboot";
-      };
+      # lanzaboote = {
+      #   enable = true;
+      #   pkiBundle = "/var/lib/sbctl";
+      # };
     supportedFilesystems = [ "ntfs" ];
     kernelPackages = pkgs.linuxPackages_latest;
   };
@@ -90,7 +90,9 @@ in
     noto-fonts-cjk-sans
     noto-fonts-emoji
     roboto
-    (nerdfonts.override {fonts = ["FiraCode" "Iosevka" "JetBrainsMono"];})
+    nerd-fonts.fira-code
+    nerd-fonts.iosevka
+    nerd-fonts.jetbrains-mono
   ];
   nixpkgs.config.allowUnfree = true;
   security.pam.services.swaylock.text = "auth include login ";
