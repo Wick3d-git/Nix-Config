@@ -1,55 +1,61 @@
 {
-  description = "Your new nix config";
+  description = "My first flake";
 
   inputs = {
-    # Nixpkgs
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-
-    # Neovim-Nightly
-    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
-    #Nixvim
+    nixpkgs.url = "nixpkgs/nixos-unstable";
     nixvim.url = "github:nix-community/nixvim";
     nixvim.inputs.nixpkgs.follows = "nixpkgs";
-
-    # Spicetify-cli
-    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
-    spicetify-nix.inputs.nixpkgs.follows = "nixpkgs";
-
-    # CachyOS Chaotic Repo
-    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
-
-    # Home manager
-    home-manager.url = "github:nix-community/home-manager";
+    home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-
-    #Hyprpanel
-    hyprpanel.url = "github:jas-singhfsu/hyprpanel";
-    hyprpanel.inputs.nixpkgs.follows = "nixpkgs";
-
-    #Stylix
-    stylix.url = "github:danth/stylix";
-
-    # Disko
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    hyprland.url = "github:hyprwm/Hyprland";
+    nur.url = "github:nix-community/NUR";
     disko.url = "github:nix-community/disko";
     disko.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    home-manager,
-    chaotic,
-    stylix,
-    disko,
-    ...
-  } @ inputs: let
-    inherit (self) outputs;
-  in {
-    nixosConfigurations = {
-      NixOS-Testing = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs;};
-        modules = [./nixos/configuration.nix chaotic.nixosModules.default disko.nixosModules.default];
+  outputs = { self, nixpkgs, home-manager, spicetify-nix, hyprland, nixvim, nur, disko, ... }@inputs:
+    let
+      lib = nixpkgs.lib;
+      system = "x86_64-linux";
+      pkgs = nixpkgs.legacyPackages.${system};
+    in {
+      nixosConfigurations = {
+        NixOS-Testing = lib.nixosSystem {
+          inherit system;
+          modules = [ ./configuration-desktop.nix disko.nixosModules.default ];
+        };
+        NixOS-Laptop-Testing = lib.nixosSystem {
+          inherit system;
+          modules = [ ./configuration-laptop.nix ];
+        };
+      };
+      homeConfigurations = {
+        wick3d = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          modules = [
+            ./home.nix
+            ./hmapps/dunst.nix
+            ./hmapps/fzf.nix
+            ./hmapps/hyprpaper.nix
+            ./hmapps/hyprshade.nix
+            ./hmapps/hyprlock.nix
+            ./hmapps/hyprland.nix
+            ./hmapps/kitty.nix
+            ./hmapps/neofetch.nix
+            ./hmapps/nixvim/nixvim.nix
+            ./hmapps/pypr.nix
+            ./hmapps/rofi.nix
+            ./hmapps/screenshot.nix
+            ./hmapps/spicetify.nix
+            ./hmapps/swaylock.nix
+            ./hmapps/zsh.nix
+            ./hmapps/waybar.nix
+            ./hmapps/wlogout.nix
+            nixvim.homeManagerModules.nixvim
+          ];
+          extraSpecialArgs = inputs;
+        };
       };
     };
-  };
 }
