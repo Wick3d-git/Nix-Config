@@ -21,6 +21,7 @@
 
   boot = {
     kernelPackages = pkgs.linuxPackages_cachyos;
+    supportedFilesystems = ["btrfs"];
     loader = {
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;

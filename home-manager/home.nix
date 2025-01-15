@@ -1,7 +1,6 @@
 {
   inputs,
   pkgs,
-  config,
   ...
 }: {
   imports = [
@@ -17,7 +16,6 @@
     ./hmapps/Hyprland/pypr.nix
     ./hmapps/ghostty.nix
     ./hmapps/rofi.nix
-    ./hmapps/dunst.nix
     ./hmapps/neofetch.nix
     ./hmapps/wlogout.nix
     ./hmapps/fzf.nix
@@ -47,7 +45,7 @@
     black
     ente-auth
     eza
-    heroic
+    gamemode
     lexend
     material-design-icons
     neofetch

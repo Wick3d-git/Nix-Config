@@ -1,17 +1,15 @@
 {
   disko.devices = {
     disk = {
-      vdb = {
+      disk0 = {
         type = "disk";
         device = "/dev/nvme1n1";
         content = {
           type = "gpt";
           partitions = {
-            ESP = {
-              priority = 1;
+            esp = {
               name = "ESP";
-              start = "1M";
-              end = "512M";
+              size = "500M";
               type = "EF00";
               content = {
                 type = "filesystem";
@@ -19,13 +17,50 @@
                 mountpoint = "/boot";
               };
             };
+
             root = {
+              name = "root0";
               size = "100%";
               content = {
-                type = "btrfs";
-                extraArgs = [ "-f" ]; # Override existing partition
-                mountpoint = "/";
-                mountOptions = [ "compress=zstd" "noatime" ];
+                type = "lvm_pv";
+                vg = "root_vg";
+              };
+            };
+          };
+        };
+      };
+      disk1 = {
+        type = "disk";
+        device = "/dev/nvme0n1";
+        content = {
+          type = "gpt";
+          partitions = {
+            root = {
+              name = "root1";
+              size = "100%";
+              content = {
+                type = "lvm_pv";
+                vg = "root_vg";
+              };
+            };
+          };
+        };
+      };
+    };
+    lvm_vg = {
+      root_vg = {
+        type = "lvm_vg";
+        lvs = {
+          root = {
+            size = "100%FREE";
+            content = {
+              type = "btrfs";
+              extraArgs = [ "-f" ];
+              subvolumes = {
+                "/root" = {
+                  mountpoint = "/";
+                };
+
               };
             };
           };
@@ -34,4 +69,3 @@
     };
   };
 }
-
