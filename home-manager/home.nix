@@ -7,6 +7,7 @@
     inputs.spicetify-nix.homeManagerModules.default
     inputs.stylix.homeManagerModules.stylix
     inputs.nixvim.homeManagerModules.nixvim
+    inputs.betterfox-nix.homeManagerModules.betterfox
     ./hmapps/Hyprland/hyprland.nix
     ./hmapps/Hyprland/hyprpaper.nix
     ./hmapps/Hyprland/hyprshade.nix
@@ -14,6 +15,7 @@
     ./hmapps/Hyprland/hyprlock.nix
     ./hmapps/Hyprland/hypridle.nix
     ./hmapps/Hyprland/pypr.nix
+    ./hmapps/Firefox/firefox.nix
     ./hmapps/ghostty.nix
     ./hmapps/rofi.nix
     ./hmapps/neofetch.nix

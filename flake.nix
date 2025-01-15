@@ -32,6 +32,11 @@
     # Disko
     disko.url = "github:nix-community/disko";
     disko.inputs.nixpkgs.follows = "nixpkgs";
+
+    #Firefox-addons
+    firefox-addons.url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+    firefox-addons.inputs.nixpkgs.follows = "nixpkgs";
+    betterfox-nix.url = "github:HeitorAugustoLN/betterfox-nix";
   };
 
   outputs = {
@@ -41,6 +46,7 @@
     chaotic,
     stylix,
     disko,
+    betterfox-nix,
     ...
   } @ inputs: let
     inherit (self) outputs;
