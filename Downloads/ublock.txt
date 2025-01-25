@@ -48,3 +48,12 @@ new.reddit.com##._2QeqBqfT5UbHBoViZUt-wX._1G4yU68P50vRZ4USXfaceV._2wqyhtudP4weVG
 ! 2024-04-14 https://www.youtube.com
 ||www.gstatic.com/youtube/img/promos/growth/6187a01b3096fe1cd76bbfe42b775ddfc7faf3047044a3afee9c620e35227155_122x56.webp$image
 ||www.gstatic.com/youtube/img/promos/growth/e4365b52dfe2aecd9eddc6f889c8a7c32bc2dafd0ea35df33114837b97ba30a1_122x56.webp$image
+
+! Jan 17, 2025 https://www.youtube.com
+www.youtube.com###buttons > ytd-button-renderer.ytd-masthead.style-scope
+www.youtube.com##.ytd-notification-topbar-button-renderer.style-scope
+www.youtube.com###logo
+www.youtube.com###voice-search-button
+www.youtube.com###sponsor-button
+www.youtube.com###top-level-buttons-computed > yt-button-view-model.ytd-menu-renderer
+www.youtube.com###button-shape > .yt-spec-button-shape-next--icon-button.yt-spec-button-shape-next--size-m.yt-spec-button-shape-next--mono.yt-spec-button-shape-next--tonal.yt-spec-button-shape-next
