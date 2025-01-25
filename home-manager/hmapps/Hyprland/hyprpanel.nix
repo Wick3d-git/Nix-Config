@@ -2,10 +2,12 @@
   inputs,
   config,
   ...
-}: let
+}:
+let
   dir = "${config.home.homeDirectory}";
-in {
-  imports = [inputs.hyprpanel.homeManagerModules.hyprpanel];
+in
+{
+  imports = [ inputs.hyprpanel.homeManagerModules.hyprpanel ];
   programs.hyprpanel = {
     # Enable the module.
     # Default: false
@@ -40,14 +42,21 @@ in {
     layout = {
       "bar.layouts" = {
         "0" = {
-          left = ["dashboard" "workspaces"];
-          middle = ["windowtitle"];
-          right = ["systray" "volume" "clock"];
+          left = [
+            "dashboard"
+            "workspaces"
+          ];
+          middle = [ "windowtitle" ];
+          right = [
+            "systray"
+            "volume"
+            "clock"
+          ];
         };
         "1" = {
-          left = [];
-          middle = [];
-          right = [];
+          left = [ ];
+          middle = [ ];
+          right = [ ];
         };
       };
     };
@@ -60,7 +69,7 @@ in {
     settings = {
       bar.launcher.autoDetectIcon = true;
       bar.workspaces.show_numbered = true;
-      bar.workspaces.ignored = "(-96|-97|-98)";
+      bar.workspaces.ignored = "(-\\\\d+)";
       bar.clock.format = "%H:%M 󰃭 %m/%d/%Y";
       bar.clock.icon = "";
       menus.dashboard.shortcuts.left.shortcut1.command = "firefox";
@@ -69,10 +78,6 @@ in {
       menus.dashboard.shortcuts.left.shortcut3.command = "webcord";
       menus.dashboard.shortcuts.left.shortcut2.command = "spotify";
       menus.dashboard.powermenu.avatar.image = "${dir}/NixOS-Config/Downloads/icon.png";
-<<<<<<< HEAD
-=======
-      menus.clock.weather.unit = "imperial";
->>>>>>> 152c064 (Update Flake)
       bar.windowtitle.custom_title = true;
 
       menus.clock = {
@@ -80,7 +85,7 @@ in {
           military = true;
           hideSeconds = false;
         };
-        weather.unit = "metric";
+        weather.unit = "imperial";
       };
 
       menus.dashboard.directories.enabled = false;
