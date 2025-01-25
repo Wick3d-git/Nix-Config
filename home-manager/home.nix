@@ -2,12 +2,12 @@
   inputs,
   pkgs,
   ...
-}: {
+}:
+{
   imports = [
     inputs.spicetify-nix.homeManagerModules.default
     inputs.stylix.homeManagerModules.stylix
     inputs.nixvim.homeManagerModules.nixvim
-    inputs.betterfox-nix.homeManagerModules.betterfox
     ./hmapps/Hyprland/hyprland.nix
     ./hmapps/Hyprland/hyprpaper.nix
     ./hmapps/Hyprland/hyprshade.nix
@@ -15,7 +15,6 @@
     ./hmapps/Hyprland/hyprlock.nix
     ./hmapps/Hyprland/hypridle.nix
     ./hmapps/Hyprland/pypr.nix
-    ./hmapps/Firefox/firefox.nix
     ./hmapps/ghostty.nix
     ./hmapps/rofi.nix
     ./hmapps/neofetch.nix
@@ -32,31 +31,38 @@
       allowUnfree = true;
       allowUnfreePredicate = _: true;
     };
+    overlays = [
+      inputs.rust-overlay.overlays.default
+    ];
   };
 
   home = {
     username = "wick3d";
     homeDirectory = "/home/wick3d";
   };
-
   home.packages = with pkgs; [
-    alejandra
     bat
-    bitwarden-cli
     bitwarden-desktop
     black
+    brave
     ente-auth
     eza
-    gamemode
+    file-roller
+    gcc
+    hclfmt
+    hyprshade
     lexend
     material-design-icons
+    markdownlint-cli
     neofetch
     nerd-fonts.fira-code
     nerd-fonts.iosevka
     nerd-fonts.jetbrains-mono
+    nixfmt-rfc-style
     noto-fonts
     noto-fonts-cjk-sans
     noto-fonts-emoji
+    obsidian
     pamixer
     pavucontrol
     playerctl
@@ -64,13 +70,24 @@
     protonmail-desktop
     pulsemixer
     pyprland
+    rclone
     roboto
     rubik
+    rust-bin.nightly.latest.default
+    shfmt
     stylua
+    ungoogled-chromium
+    unzip
     webcord-vencord
     yamlfmt
     yazi
+    zip
   ];
+
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-31.7.7"
+  ];
+
   gtk = {
     enable = true;
     iconTheme.package = pkgs.nordzy-icon-theme;
@@ -82,9 +99,9 @@
   programs.home-manager.enable = true;
   programs.git = {
     enable = true;
-    userName = "Anthony Abaray";
-    userEmail = "122565774+Wick3d-git@users.noreply.github.com";
-    extraConfig = {init.defaultBranch = "main";};
+    extraConfig = {
+      init.defaultBranch = "main";
+    };
   };
 
   systemd.user.startServices = "sd-switch";
