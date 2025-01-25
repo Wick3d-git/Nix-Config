@@ -15,6 +15,13 @@
 ### Filetree
 
 ```bash
+
+Coding/
+Downloads/
+Screenshots/
+
+flake.nix
+
 nixos/
 ├── configuration.nix
 ├── disko.nix
