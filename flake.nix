@@ -15,9 +15,6 @@
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     spicetify-nix.inputs.nixpkgs.follows = "nixpkgs";
 
-    # CachyOS Chaotic Repo
-    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
-
     # Home manager
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
@@ -33,29 +30,33 @@
     disko.url = "github:nix-community/disko";
     disko.inputs.nixpkgs.follows = "nixpkgs";
 
-    #Firefox-addons
-    firefox-addons.url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
-    firefox-addons.inputs.nixpkgs.follows = "nixpkgs";
-    betterfox-nix.url = "github:HeitorAugustoLN/betterfox-nix";
+    # Rust
+    rust-overlay.url = "github:oxalica/rust-overlay";
+    rust-overlay.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    home-manager,
-    chaotic,
-    stylix,
-    disko,
-    betterfox-nix,
-    ...
-  } @ inputs: let
-    inherit (self) outputs;
-  in {
-    nixosConfigurations = {
-      NixOS-Testing = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs;};
-        modules = [./nixos/configuration.nix chaotic.nixosModules.default disko.nixosModules.default];
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      stylix,
+      disko,
+      rust-overlay,
+      ...
+    }@inputs:
+    let
+      inherit (self) outputs;
+    in
+    {
+      nixosConfigurations = {
+        NixOS-Testing = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs outputs; };
+          modules = [
+            ./nixos/configuration.nix
+            disko.nixosModules.default
+          ];
+        };
       };
     };
-  };
 }
