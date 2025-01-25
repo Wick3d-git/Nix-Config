@@ -12,6 +12,62 @@
 
 ### ❌ I WON’T BE PROVIDING INSTALLATION SUPPORT FOR THIS; STEAL THE CODE, THIS IS TOO SELF-CENTERED TO ME AND MY USE CASE
 
+### Filetree
+
+```bash
+nixos/
+├── configuration.nix
+├── disko.nix
+└── hardware-configuration.nix
+
+home-manager/
+├── hmapps
+│   ├── fzf.nix
+│   ├── ghostty.nix
+│   ├── Hyprland
+│   │   ├── hypridle.nix
+│   │   ├── hyprland.nix
+│   │   ├── hyprlock.nix
+│   │   ├── hyprpanel.nix
+│   │   ├── hyprpaper.nix
+│   │   ├── hyprshade.nix
+│   │   └── pypr.nix
+│   ├── neofetch.nix
+│   ├── Nixvim
+│   │   ├── keys.nix
+│   │   ├── nixvim.nix
+│   │   ├── plugins
+│   │   │   ├── bufferline.nix
+│   │   │   ├── cmp.nix
+│   │   │   ├── conform.nix
+│   │   │   ├── copilot.nix
+│   │   │   ├── cursorline.nix
+│   │   │   ├── fidget.nix
+│   │   │   ├── git.nix
+│   │   │   ├── harpoon.nix
+│   │   │   ├── lint.nix
+│   │   │   ├── lsp.nix
+│   │   │   ├── lspsaga.nix
+│   │   │   ├── lualine.nix
+│   │   │   ├── luasnip.nix
+│   │   │   ├── markdown.nix
+│   │   │   ├── neo-tree.nix
+│   │   │   ├── noice.nix
+│   │   │   ├── none-ls.nix
+│   │   │   ├── nvim-notify.nix
+│   │   │   ├── obsidian.nix
+│   │   │   ├── telescope.nix
+│   │   │   ├── treesitter.nix
+│   │   │   └── undotree.nix
+│   │   └── sets.nix
+│   ├── rofi.nix
+│   ├── spicetify.nix
+│   ├── stylix.nix
+│   ├── wlogout.nix
+│   └── zsh.nix
+└── home.nix
+```
+
 ### Screenshots
 
 ---
