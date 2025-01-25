@@ -1,5 +1,9 @@
-{ pkgs, config, ... }: 
-let 
+{
+  pkgs,
+  config,
+  ...
+}:
+let
   dir = "${config.home.homeDirectory}";
 in
 {
@@ -12,7 +16,7 @@ in
       show-icons = true;
     };
     package = pkgs."rofi-wayland";
-    
+
     theme = "${dir}/.config/rofi/theme.rasi";
   };
   home.file.".config/rofi/theme.rasi".text = ''

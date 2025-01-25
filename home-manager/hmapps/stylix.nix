@@ -1,5 +1,9 @@
-{ pkgs, config, ... }:
-let 
+{
+  pkgs,
+  config,
+  ...
+}:
+let
   dir = "${config.home.homeDirectory}";
 in
 {
@@ -17,18 +21,17 @@ in
     fonts = {
       monospace = {
         package = pkgs.nerd-fonts.jetbrains-mono;
-	name = "JetBrainsMono Nerd Font Mono";
-      };  
+        name = "JetBrainsMono Nerd Font Mono";
+      };
       sansSerif = {
         package = pkgs.nerd-fonts.jetbrains-mono;
-	name = "JetBrainsMono Nerd Font Mono";
-      };  
+        name = "JetBrainsMono Nerd Font Mono";
+      };
       serif = {
         package = pkgs.nerd-fonts.jetbrains-mono;
-	name = "JetBrainsMono Nerd Font Mono";
-      };  
+        name = "JetBrainsMono Nerd Font Mono";
+      };
     };
     polarity = "dark";
   };
 }
-

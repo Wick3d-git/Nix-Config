@@ -1,8 +1,5 @@
-{
- config,
- ...
-}:
-let 
+{ config, ... }:
+let
   image_dir = "${config.home.homeDirectory}";
 in
 {
@@ -41,7 +38,7 @@ in
       }
     ];
     style = ''
-          
+
           window {
           font-family: JetBrains Mono Nerd Font;
           font-size: 14pt;
