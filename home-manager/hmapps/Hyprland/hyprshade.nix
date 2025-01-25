@@ -1,6 +1,6 @@
 {
-home.file.".config/hypr/shaders/vibrance.gls".text =
-"precision highp float;
+  home.file.".config/hypr/shaders/vibrance.gls".text =
+    "precision highp float;
 varying vec2 v_texcoord; uniform sampler2D tex;
 const vec3 VIB_RGB_BALANCE = vec3(1.0, 1.0, 1.0);
 const float VIB_VIBRANCE = 0.4;

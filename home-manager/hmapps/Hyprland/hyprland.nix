@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
@@ -57,7 +58,7 @@
         mouse_refocus = 0;
         accel_profile = "flat";
         follow_mouse = 1;
-        sensitivity = 0;
+        sensitivity = -0.5;
         touchpad = {
           natural_scroll = false;
         };
@@ -95,14 +96,15 @@
         ]
         ++ (builtins.concatLists (
           builtins.genList (
-            i: let
+            i:
+            let
               ws = i + 1;
-            in [
+            in
+            [
               "$MOD, code:1${toString i}, workspace, ${toString ws}"
               "$MOD SHIFT, code:1${toString i}, movetoworkspace, ${toString ws}"
             ]
-          )
-          9
+          ) 9
         ));
       bindm = [
         "$MOD, mouse:272, movewindow"
