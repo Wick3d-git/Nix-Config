@@ -1,31 +1,80 @@
 {
   programs.nixvim.plugins.conform-nvim = {
     enable = true;
+
+    lazyLoad.settings = {
+      cmd = [
+        "ConformInfo"
+      ];
+      event = [ "BufWrite" ];
+    };
+
     settings = {
-      format_on_save = ''
-        function(bufnr)
-          -- Disable "format_on_save lsp_fallback" for lanuages that don't
-          -- have a well standardized coding style. You can add additional
-          -- lanuages here or re-enable it for the disabled ones.
-          local disable_filetypes = { c = true, cpp = true }
-          return {
-            timeout_ms = 500,
-            lsp_fallback = not disable_filetypes[vim.bo[bufnr].filetype]
-          }
-        end
-      '';
+      format_on_save = {
+        lspFallback = true;
+        timeoutMs = 500;
+      };
+      notify_on_error = true;
+
       formatters_by_ft = {
-        html = [["prettierd"]];
-        css = [["prettierd"]];
-        javascript = [["prettierd"]];
-        javascriptreact = [["prettierd"]];
-        typescript = [["prettierd"]];
-        typescriptreact = [["prettierd"]];
-        python = ["black"];
-        lua = ["stylua"];
-        nix = ["alejandra"];
-        markdown = [["prettierd"]];
-        yaml = ["yamlfmt"];
+        html = [
+          [
+            "prettierd"
+            "prettier"
+          ]
+        ];
+        css = [
+          [
+            "prettierd"
+            "prettier"
+          ]
+        ];
+        javascript = [
+          [
+            "prettierd"
+            "prettier"
+          ]
+        ];
+        javascriptreact = [
+          [
+            "prettierd"
+            "prettier"
+          ]
+        ];
+        typescript = [
+          [
+            "prettierd"
+            "prettier"
+          ]
+        ];
+        typescriptreact = [
+          [
+            "prettierd"
+            "prettier"
+          ]
+        ];
+        python = [ "black" ];
+        lua = [ "stylua" ];
+        nix = [ "nixfmt" ];
+        markdown = [
+          [
+            "prettierd"
+            "prettier"
+          ]
+        ];
+        yaml = [
+          "yamllint"
+          "yamlfmt"
+        ];
+        terragrunt = [
+          "hcl"
+        ];
+        bash = [
+          "shfmt"
+        ];
+        sh = [
+          "shfmt"
+        ];
       };
     };
   };

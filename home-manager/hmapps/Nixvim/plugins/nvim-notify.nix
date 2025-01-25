@@ -1,5 +1,5 @@
 {
-    programs.nixvim.plugins.notify = {
+  programs.nixvim.plugins.notify = {
     enable = true;
     backgroundColour = "#000000";
     fps = 60;

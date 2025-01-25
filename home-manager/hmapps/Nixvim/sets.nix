@@ -8,10 +8,10 @@
     expandtab = true;
     showmode = false;
     clipboard = {
-        providers = {
-          wl-copy.enable = true; # For Wayland
-          xsel.enable = true; # For X11
-        };
+      providers = {
+        wl-copy.enable = true; # For Wayland
+        xsel.enable = true; # For X11
+      };
       register = "unnamedplus";
     };
     smartindent = true;
@@ -34,7 +34,11 @@
     listchars.__raw = "{ tab = '» ', trail = '·', nbsp = '␣' }";
     inccommand = "split";
     cursorline = true;
-    completeopt = ["menuone" "noselect" "noinsert"];
+    completeopt = [
+      "menuone"
+      "noselect"
+      "noinsert"
+    ];
     foldcolumn = "0";
     foldlevel = 99;
     foldlevelstart = 99;

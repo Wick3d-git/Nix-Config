@@ -2,7 +2,10 @@
   programs.nixvim = {
     keymaps = [
       {
-        mode = ["n" "v"];
+        mode = [
+          "n"
+          "v"
+        ];
         key = "<leader>cf";
         action = "<cmd>lua vim.lsp.buf.format()<cr>";
         options = {

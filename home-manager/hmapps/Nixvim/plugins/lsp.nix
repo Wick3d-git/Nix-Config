@@ -1,13 +1,23 @@
 {
   programs.nixvim.plugins = {
-    lsp-format = {enable = true;};
+    lsp-format = {
+      enable = true;
+    };
     lsp = {
       enable = true;
       servers = {
-        cmake = {enable = true;};
-        bashls = {enable = true;};
-        ts_ls = {enable = true;};
-        rust_analyzer = { enable = true; };
+        cmake = {
+          enable = true;
+        };
+        bashls = {
+          enable = true;
+        };
+        ts_ls = {
+          enable = true;
+        };
+        rust_analyzer = {
+          enable = true;
+        };
         rust_analyzer.installCargo = false;
         rust_analyzer.installRustc = false;
         rust_analyzer.settings = {
@@ -23,14 +33,30 @@
             };
           };
         };
-        html = {enable = true;};
-        lua_ls = {enable = true;};
-        nil_ls = {enable = true;};
-        marksman = {enable = true;};
-        pyright = {enable = true;};
-        gopls = {enable = true;};
-        terraformls = {enable = true;};
-        yamlls = {enable = true;};
+        html = {
+          enable = true;
+        };
+        lua_ls = {
+          enable = true;
+        };
+        nil_ls = {
+          enable = true;
+        };
+        marksman = {
+          enable = true;
+        };
+        pyright = {
+          enable = true;
+        };
+        gopls = {
+          enable = true;
+        };
+        terraformls = {
+          enable = true;
+        };
+        yamlls = {
+          enable = true;
+        };
       };
       keymaps = {
         silent = true;
